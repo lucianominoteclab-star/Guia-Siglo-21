@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de Consulta | Siglo 21</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Asistente de Consultas para Asesores</h1>
+        <p>Base de Conocimientos Dinámica - Universidad Siglo 21</p>
+        
+        <nav class="enlaces-rapidos">
+            <a href="https://21.edu.ar/bcsiglo21" target="_blank">Base de Conocimiento (BC) Interna</a>
+            <a href="https://lanube.21.edu.ar/" target="_blank">Acceso a La Nube (Campus)</a>
+        </nav>
+    </header>
+
+    <div id="chat-container">
+        <div id="messages">
+            <div class="message system">
+                Hola! Soy tu Asistente de IA. Estoy conectado a la BC oficial para ayudarte con consultas sobre aranceles, articulaciones y trámites. ¿En qué puedo asistirte hoy?
+            </div>
+        </div>
+        
+        <form id="chat-form">
+            <input type="text" id="user-input" placeholder="Escribe tu pregunta aquí..." required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
