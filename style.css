@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #005A9C; /* Color institucional de Siglo 21 (ejemplo) */
+    color: white;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+.enlaces-rapidos a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.enlaces-rapidos a:hover {
+    border-bottom: 2px solid #FFC300; /* Amarillo (ejemplo) */
+}
+
+#chat-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 600px; /* Altura fija para el chat */
+}
+
+#messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    border-bottom: 1px solid #eee;
+}
+
+.message {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.message.user {
+    background-color: #d1e7ff; /* Azul claro */
+    margin-left: auto;
+    text-align: right;
+}
+
+.message.system {
+    background-color: #e9ecef; /* Gris claro */
+    margin-right: auto;
+    text-align: left;
+}
+
+#chat-form {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#chat-form button {
+    background-color: #005A9C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#chat-form button:hover {
+    background-color: #004c85;
+}
