@@ -1,140 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guía Siglo 21 — Recursos del Asesor</title>
-  <style>
-    body { font-family: Arial, sans-serif; background:#f5f7fa; margin:0; padding:0; }
-    header { background:#0066cc; color:white; padding:20px; text-align:center; }
-    nav { background:#003366; padding:10px; }
-    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
-    section { padding:25px; max-width:1000px; margin:auto; background:white; margin-top:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-    h2 { color:#003366; }
-    .faq-item { margin-bottom:15px; }
-    .faq-item p { margin:5px 0 0 0; }
-    footer { text-align:center; padding:20px; color:#666; }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Asistente Reglamentos — Siglo 21 (Asesores)</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Guía Completa — Universidad Siglo 21</h1>
-  <p>Información basada en La Nube 21, BCSiglo21 y Reglamento Académico</p>
-</header>
+  <header class="site-header">
+    <h1>Asistente Reglamentos — Universidad Siglo 21</h1>
+    <p>Respuestas extraídas del Reglamento Institucional (2025). Escribí tu pregunta y te devolvemos la sección oficial.</p>
+  </header>
 
-<nav>
-  <a href="#nube">La Nube 21</a>
-  <a href="#cau">CAU / BCSiglo21</a>
-  <a href="#tipos">Tipos de Materia</a>
-  <a href="#tfg">TFG</a>
-  <a href="#eval">Evaluaciones</a>
-  <a href="#faq">FAQ</a>
-</nav>
+  <main class="container">
+    <section class="search-box">
+      <input id="query" placeholder="Ej: TFG, MIA, equivalencias, modalidades, inscripciones..." autofocus>
+      <div id="results" class="results"></div>
+    </section>
 
-<section id="nube">
-  <h2>¿Qué es La Nube 21?</h2>
-  <p>Es la plataforma central donde el estudiante gestiona toda su vida académica: aulas virtuales, inscripciones, pagos, trámites, certificaciones, materiales y más.</p>
-</section>
+    <section class="help">
+      <h2>Atajos rápidos</h2>
+      <div class="chips">
+        <button class="chip" data-q="tfg">TFG</button>
+        <button class="chip" data-q="mia">MIA</button>
+        <button class="chip" data-q="modalidades">Modalidades</button>
+        <button class="chip" data-q="inscripcion">Inscripción</button>
+        <button class="chip" data-q="equivalencias">Equivalencias</button>
+        <button class="chip" data-q="graduacion">Graduación</button>
+      </div>
+    </section>
 
-<section id="cau">
-  <h2>CAU y BCSiglo21</h2>
-  <p>Los CAU (Centros de Apoyo Universitario) brindan acompañamiento y soporte académico. El acceso BCSiglo21 es la puerta de ingreso a recursos internos del CAU y autenticación para servicios.</p>
-</section>
+    <footer class="footer">
+      <p>Fuente oficial: <a href="https://contenidos.21.edu.ar/microsites/reglamento/index.php" target="_blank" rel="noopener">Reglamento Institucional 2025 — Universidad Siglo 21</a></p>
+    </footer>
+  </main>
 
-<section id="tipos">
-  <h2>Tipos de Materias (MEC, MIA, MIP)</h2>
-  <h3>MEC — Exploración y Conceptualización</h3>
-  <p>Construcción de base teórica, conceptos iniciales y fundamentos.</p>
-
-  <h3>MIA — Integración y Aplicación</h3>
-  <p>Aplicación práctica + análisis + resolución de problemas. Incluye TP manuales y sin recuperatorio.</p>
-
-  <h3>MIP — Intervención Profesional</h3>
-  <p>Nivel más alto, orientado a la práctica real de la profesión.</p>
-</section>
-
-<section id="tfg">
-  <h2>TFG — Trabajo Final de Graduación</h2>
-  <p>Instancia obligatoria para graduarse. Se compone de:</p>
-  <ul>
-    <li><strong>Seminario Final:</strong> producción del proyecto.</li>
-    <li><strong>Evaluación CAE:</strong> análisis del trabajo.</li>
-    <li><strong>Defensa Oral:</strong> presentación ante tribunal.</li>
-  </ul>
-</section>
-
-<section id="eval">
-  <h2>Evaluaciones</h2>
-  <h3>Trabajos Prácticos (TP)</h3>
-  <p>Generalmente 4 por materia, corregidos por docente, sin recuperatorio.</p>
-
-  <h3>Parciales</h3>
-  <p>Según modalidad, con distintas ventanas de rendida.</p>
-
-  <h3>Finales</h3>
-  <p>Determinados por reglamento y calendario académico.</p>
-</section>
-
-<section id="faq">
-  <h2>Preguntas Frecuentes</h2>
-  <div class="faq-item">
-    <strong>¿Qué pasa si no entrego un TP?</strong>
-    <p>No se recupera esa instancia.</p>
-  </div>
-  <div class="faq-item">
-    <strong>¿Cómo veo mis notas?</strong>
-    <p>Ingresando a La Nube → Portal del Estudiante.</p>
-  </div>
-  <div class="faq-item">
-    <strong>¿Qué necesito para rendir final?</strong>
-    <p>Depende de la condición generada por notas de TP y parciales.</p>
-  </div>
-</section>
-
-<footer>
-  <p>Guía creada para asesores de la Universidad Siglo 21</p>
-</footer>
-<section id="chat">
-  <h2>Asistente Interactivo (sin IA)</h2>
-  <p>Escribí tu pregunta y el sistema buscará coincidencias dentro del reglamento y esta guía.</p>
-  <input type="text" id="query" placeholder="Ej: regularidad, MIA, TFG, parciales..." style="width:100%; padding:10px; font-size:16px;">
-  <div id="results" style="margin-top:20px;"></div>
-</section>
-
-<script>
-const baseConocimiento = [
-  { pregunta: "regularidad", respuesta: "La regularidad se obtiene cumpliendo actividades, TP y parciales según la materia. Permite rendir final." },
-  { pregunta: "tp", respuesta: "Los Trabajos Prácticos generalmente son 4 por materia, sin recuperatorio, corregidos por docente." },
-  { pregunta: "parcial", respuesta: "Los parciales varían según modalidad, con fechas dentro del calendario académico." },
-  { pregunta: "final", respuesta: "El final debe rendirse según condición (regular/promocional) y modalidad de cada materia." },
-  { pregunta: "mia", respuesta: "Las MIA son materias de Integración y Aplicación. Incluyen prácticas, análisis y resolución de problemas." },
-  { pregunta: "mec", respuesta: "Las MEC son materias de Exploración y Conceptualización, centradas en fundamentos teóricos." },
-  { pregunta: "mip", respuesta: "Las MIP son materias de Intervención Profesional, nivel más alto orientado al ejercicio real de la profesión." },
-  { pregunta: "tfg", respuesta: "El TFG incluye Seminario Final, evaluación CAE y defensa oral ante tribunal." },
-  { pregunta: "equivalencia", respuesta: "Las equivalencias se gestionan en la plataforma oficial e incluyen programas sellados y certificación." },
-  { pregunta: "la nube", respuesta: "La Nube es la plataforma central del estudiante: aulas, inscripciones, pagos y trámites." },
-  { pregunta: "cau", respuesta: "Los CAU brindan soporte académico y acompañamiento. BCSiglo21 gestiona accesos internos." }
-];
-
-document.getElementById('query').addEventListener('input', function() {
-  const q = this.value.toLowerCase();
-  const cont = document.getElementById('results');
-  cont.innerHTML = "";
-
-  if (q.length < 2) return;
-
-  const encontrados = baseConocimiento.filter(item => item.pregunta.includes(q));
-
-  if (encontrados.length === 0) {
-    cont.innerHTML = "<p>No se encontraron resultados. Probá con otra palabra clave.</p>";
-    return;
-  }
-
-  encontrados.forEach(item => {
-    cont.innerHTML += `<div style='padding:10px; background:#eef3ff; margin-bottom:10px; border-radius:8px;'><strong>${item.pregunta.toUpperCase()}</strong><br>${item.respuesta}</div>`;
-  });
-});
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
