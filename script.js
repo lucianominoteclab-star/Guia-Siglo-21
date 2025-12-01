@@ -1,40 +1,28 @@
-document.getElementById('chat-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const input = document.getElementById('user-input');
-    const message = input.value;
-    input.value = '';
-
-    if (message.trim() === '') return;
-
-    // 1. Mostrar el mensaje del usuario
-    appendMessage(message, 'user');
-
-    // 2. Mostrar un indicador de "escribiendo..."
-    const thinkingMessage = appendMessage('Escribiendo...', 'system thinking');
-
-    // 3. ******************************************************
-    // ESTA SECCIÓN SE COMPLETA EN LA FASE 3 CON LA URL DEL BACKEND (CLOUD FUNCTION)
-    // Actualmente, solo simula una respuesta.
-    // ******************************************************
-
-    setTimeout(() => {
-        // Eliminar el mensaje de "escribiendo..."
-        thinkingMessage.remove(); 
-        
-        // Respuesta simulada
-        appendMessage('Lo siento, aún no estoy conectado a la IA de Google. ¡Completemos la Fase 3!', 'system');
-
-    }, 1500); 
-
-});
-
-function appendMessage(text, className) {
-    const messagesDiv = document.getElementById('messages');
-    const messageElement = document.createElement('div');
-    messageElement.className = 'message ' + className;
-    messageElement.textContent = text;
-    messagesDiv.appendChild(messageElement);
-    // Desplazar hacia el último mensaje
-    messagesDiv.scrollTop = messagesDiv.scrollHeight; 
-    return messageElement;
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --primary:#003366;
+  --accent:#0066cc;
+  --muted:#6b7280;
 }
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin:0; background:var(--bg); color:#0b1220}
+.site-header{background:var(--primary); color:white; padding:28px 20px; text-align:center}
+.site-header h1{margin:0 0 6px; font-size:20px}
+.site-header p{margin:0; opacity:.95}
+
+.container{max-width:980px; margin:26px auto; padding:0 16px}
+.search-box{background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 20px rgba(6,15,30,.06)}
+#query{width:100%; padding:12px 14px; font-size:16px; border:1px solid #e6eef9; border-radius:8px}
+.results{margin-top:14px}
+
+.result-card{padding:12px; background:#eef5ff; border-radius:8px; margin-bottom:10px; border-left:4px solid var(--accent)}
+.result-card h3{margin:0 0 6px; color:var(--primary); font-size:16px}
+.result-card p{margin:0 0 8px; color:var(--muted)}
+.result-card details{margin-top:8px}
+
+.chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:6px}
+.chip{background:#fff; border:1px solid #e3e8f0; padding:8px 12px; border-radius:999px; cursor:pointer}
+.footer{margin-top:18px; text-align:center; color:var(--muted)}
+.footer a{color:var(--accent)}
+@media (max-width:600px){ .site-header h1{font-size:18px}}
