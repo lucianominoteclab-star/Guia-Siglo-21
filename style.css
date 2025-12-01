@@ -1,101 +1,29 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --primary:#003366;
+  --accent:#0066cc;
+  --muted:#6b7280;
 }
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin:0; background:var(--bg); color:#0b1220}
+.site-header{background:var(--primary); color:white; padding:28px 20px; text-align:center}
+.site-header h1{margin:0 0 6px; font-size:20px}
+.site-header p{margin:0; opacity:.95}
 
-header {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #005A9C; /* Color institucional de Siglo 21 (ejemplo) */
-    color: white;
-    width: 80%;
-    max-width: 900px;
-    border-radius: 8px;
-}
+.container{max-width:980px; margin:26px auto; padding:0 16px}
+.search-box{background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 20px rgba(6,15,30,.06)}
+#query{width:100%; padding:12px 14px; font-size:16px; border:1px solid #e6eef9; border-radius:8px}
+.results{margin-top:14px}
 
-.enlaces-rapidos a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s;
-}
+.result-card{padding:12px; background:#eef5ff; border-radius:8px; margin-bottom:10px; border-left:4px solid var(--accent)}
+.result-card h3{margin:0 0 6px; color:var(--primary); font-size:16px}
+.result-card p{margin:0 0 8px; color:var(--muted)}
+.result-card details{margin-top:8px}
 
-.enlaces-rapidos a:hover {
-    border-bottom: 2px solid #FFC300; /* Amarillo (ejemplo) */
-}
+.chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:6px}
+.chip{background:#fff; border:1px solid #e3e8f0; padding:8px 12px; border-radius:999px; cursor:pointer}
+.footer{margin-top:18px; text-align:center; color:var(--muted)}
+.footer a{color:var(--accent)}
+@media (max-width:600px){ .site-header h1{font-size:18px}}
 
-#chat-container {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 900px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    height: 600px; /* Altura fija para el chat */
-}
-
-#messages {
-    flex-grow: 1;
-    padding: 15px;
-    overflow-y: auto;
-    border-bottom: 1px solid #eee;
-}
-
-.message {
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border-radius: 15px;
-    max-width: 80%;
-    line-height: 1.5;
-}
-
-.message.user {
-    background-color: #d1e7ff; /* Azul claro */
-    margin-left: auto;
-    text-align: right;
-}
-
-.message.system {
-    background-color: #e9ecef; /* Gris claro */
-    margin-right: auto;
-    text-align: left;
-}
-
-#chat-form {
-    display: flex;
-    padding: 15px;
-    border-top: 1px solid #eee;
-}
-
-#user-input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
-}
-
-#chat-form button {
-    background-color: #005A9C;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#chat-form button:hover {
-    background-color: #004c85;
-}
