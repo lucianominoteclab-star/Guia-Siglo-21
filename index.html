@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Asistente Reglamentos — Siglo 21</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <h1>Asistente Reglamentos — Universidad Siglo 21</h1>
+  <p>Modo WhatsApp: seleccioná el modo y consultá. Fuente: GUIA SIGLO21.docx</p>
+  <div class="mode-toggle">
+    <button id="mode_official" class="mode active">Texto Oficial</button>
+    <button id="mode_advisor" class="mode">Explicado para Asesores</button>
+  </div>
+</header>
+<main class="container">
+  <div id="chat_wrap" class="chat-wrap">
+    <div id="messages" class="messages"></div>
+    <div class="input-area">
+      <input id="input_msg" placeholder="Escribí tu pregunta..." />
+      <button id="send_btn">Enviar</button>
+    </div>
+  </div>
+  <aside class="help">
+    <h3>Atajos</h3>
+    <button class="chip" data-q="capitulo">Buscar por capítulo</button>
+    <button class="chip" data-q="tfg">TFG</button>
+    <button class="chip" data-q="mia">MIA</button>
+    <button class="chip" data-q="parciales">Parciales</button>
+  </aside>
+</main>
+<footer class="footer">Preparado para GitHub Pages — Documento fuente: GUIA SIGLO21.docx</footer>
+<script src="script.js"></script>
+</body>
+</html>
